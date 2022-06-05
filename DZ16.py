@@ -10,11 +10,26 @@ print(l)
 print()
 
 # 2. Написать фильтер-выражение, котрое принимает список строк и возвращает кортеж, содержащий только строки, где есть цифры.
+# 2.1
 lst2 = ['banana1', 'ap1ple', '1orange', 'strawberry', '1lemon']
 lst22 = []
 for i in lst2:
     if list(filter(str.isdigit, i)):
         lst22.append(i)
+print(tuple(lst22))
+
+print()
+
+# 2.2
+lst2 = ['banana1', 'ap1ple', '1orange', 'strawberry', '1lemon']
+lst22 = []
+
+def numbers(x):
+    for i in x:
+        if list(filter(str.isdigit, i)):
+            lst22.append(i)
+
+numbers(lst2)
 print(tuple(lst22))
 
 print()
